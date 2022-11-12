@@ -1,14 +1,15 @@
+from matplotlib import pyplot
+import CSVConversion as conv
 import pandas
 import numpy
-from matplotlib import pyplot
+import csv
 
 def main() -> None:
-    x = numpy.array([1, 2, 3, 4, 5, 6, 7])
-    y = numpy.array([13, 52, 10, 0 , 1, 41, 97])
-
-    dataFrame = pandas.DataFrame(y, x)
-    pyplot.plot(dataFrame)
-    pyplot.show()
+    rows = numpy.array(conv.toRows("./input/bankdata.csv"))
+    dataFrame = pandas.DataFrame(rows)
+    
+    print(dataFrame)
+    
 
 if __name__ == "__main__":
     main()
