@@ -5,9 +5,10 @@ import numpy
 import csv
 
 def main() -> None:
-    rows = numpy.array(conv.toRows("./input/bankdata.csv"))
-    dataFrame = pandas.DataFrame(rows)
-    
+    rows = conv.toRows("./input/bankdata.csv")
+    headerRow = [rows[0].pop(index) for index in range(len(rows[0]))]
+    dataFrame = pandas.DataFrame(rows, columns=headerRow)
+
     print(dataFrame)
     
 
