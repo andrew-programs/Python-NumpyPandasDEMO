@@ -24,5 +24,5 @@ def selectRow(csvData: list[list], index) -> list:
     return csvData[index]
 
 def selectColumn(csvData: list[list], index: int) -> list:
-    """Allows you to pass in a list of rows and select a row."""
+    """Allows you to pass in a list of rows and select a column."""
     return [list[index] for list in csvData]
