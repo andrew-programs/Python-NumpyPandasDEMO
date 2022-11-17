@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 import csv
 
+# A method that converts csv to a list of rows.
 def toRows(filePath: str) -> list[list]:
     """Converts CSV file to rows in a list."""
     with open(filePath, "r") as csvFile:
@@ -8,6 +9,7 @@ def toRows(filePath: str) -> list[list]:
 
     return rows
 
+# A method t
 def toColumns(filePath: str) -> list[list]:
     """Converts CSV file to columns in a list."""
     with open(filePath, "r") as csvFile:
