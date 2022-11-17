@@ -9,7 +9,7 @@ def toRows(filePath: str) -> list[list]:
 
     return rows
 
-# A method t
+# A method that converts csv to a list of columns.
 def toColumns(filePath: str) -> list[list]:
     """Converts CSV file to columns in a list."""
     with open(filePath, "r") as csvFile:
@@ -21,10 +21,12 @@ def toColumns(filePath: str) -> list[list]:
     
     return columns
 
-def selectRow(csvData: list[list], index) -> list:
+# A method that selects a row from a list.
+def selectRow(csvData: list[list], index: int) -> list:
     """Allows you to pass in a list of rows and select a row."""
     return csvData[index]
 
+# A method that selects a column from a list
 def selectColumn(csvData: list[list], index: int) -> list:
     """Allows you to pass in a list of rows and select a column."""
     return [list[index] for list in csvData]
